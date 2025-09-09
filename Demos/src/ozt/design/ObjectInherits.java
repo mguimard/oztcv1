@@ -1,5 +1,53 @@
 package ozt.design;
 
+class E {
+	void f() {}
+	//String f() {};
+	//void f(int i) {};	
+	//void f(Skateboard s) {};
+}
+
+class F extends E {
+	/*String f() {
+		return "test";
+	}*/
+}
+
+// f();
+
+class Z {
+	Z(){
+		
+		this(1233);
+	}
+	
+	Z (int i ){
+		// super()
+	}
+}
+
+class Skateboard {
+	static {
+		// au chargement de la classe par la JVM
+	}
+	
+	static {
+		// ..
+	}
+	
+	{
+		// bloc instance (avant le new)
+	}
+	
+	{
+		// ...
+	}
+	
+	public Skateboard() {
+	
+	}
+}
+
 
 class Velo {
 	
