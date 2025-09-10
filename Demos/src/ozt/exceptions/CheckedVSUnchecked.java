@@ -4,60 +4,81 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Scanner;
 
-class Animal {		
+class Animal {
 }
 
 public class CheckedVSUnchecked {
-	
-	static int i = 1 / 0;
-	
+
+	//static int i = 1 / 0;
+
 	static {
 		System.out.println("Static bloc 1");
-		int i = 1 / 0;		
+		//int i = 1 / 0;
 	}
-	
+
 	static {
 		System.out.println("Static bloc 2");
 	}
 
-	public static void main(String[] args) {
-		/*
+	private static void m() throws SQLException {
 		try {
-			
+			throw new SQLException();
+		} catch (Exception e) {
+			throw e;
 		}
-		catch (NullPointerException | RuntimeException e) {
-			
-		}*/
-		
 	}
-	
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println(scanner.nextInt());		
+		
+		try {
+			m();
+		} catch (SQLException e) {
+			System.out.println("Caught Successfully.");
+		}
+	}
+
+	public static void main11(String[] args) {
+		/*
+		 * try {
+		 * 
+		 * } catch (NullPointerException | RuntimeException e) {
+		 * 
+		 * }
+		 */
+
+	}
+
 	public static void main10(String[] args) {
 		System.out.println("début de programme");
 	}
-	
+
 	public static void main9(String[] args) {
-		
-		try{
+
+		try {
 			g();
-		} catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println(e);
 		}
-		
+
 		System.out.println("Fin de programme");
 	}
-	
+
 	static void g() {
 		throw null;
 	}
 
 	public static void main7(String[] args) throws Exception {
 		Exception e = null;
-		
+
 		throw null;
-		//throw e;
+		// throw e;
 	}
-	
+
 	public static void main6(String[] args) {
 		try {
 			f();
@@ -65,22 +86,20 @@ public class CheckedVSUnchecked {
 			// ....
 		}
 	}
-	
-	static void f() throws Exception{} // checked
-	
+
+	static void f() throws Exception {
+	} // checked
+
 	public static void main5(String[] args) {
-		
+
 		try {
 			// du code
-		} catch(Exception e) {
-			
+		} catch (Exception e) {
+
 		}
 		/*
-		try {
-			// du code qui ne leve pas une IOException
-		} catch(IOException e) {
-			// unreachable
-		}
+		 * try { // du code qui ne leve pas une IOException } catch(IOException e) { //
+		 * unreachable }
 		 */
 		// checked => vérifié à la compilation
 		// Exception
