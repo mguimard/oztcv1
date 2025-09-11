@@ -1,20 +1,19 @@
 package ozt.io;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class FilesBasics {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  throws IOException {
 		
-		File dossier = new File("/tmp/ozt");
-		
-		for(File f : dossier.listFiles()) {
-			System.out.println(f);
-			System.out.println(f.isDirectory());
-			
-		}
-		
+		BufferedReader br = new BufferedReader(new
+				InputStreamReader(System.in));
+				System.out.print("Enter any number between 1 and 10: ");
+				int num = br.read();
+				System.out.println((char)num);
 		
 	}
 	
