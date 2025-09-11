@@ -10,7 +10,7 @@ class MyLib {
 		assert workers >= 0 : "READ THE FUCKING MANUAL";
 		
 		assert false: null;
-		assert false: false;
+		assert false: false; 
 		assert false: true;
 		assert false: 123;
 		
