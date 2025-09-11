@@ -10,46 +10,55 @@ public class Strings {
 			return "miaou";
 		}
 	}
-	
+
 	public static void main(String[] args) {
+		String json = """
+				ABC
+				Z
+				""";
+		System.out.println(json.strip().length());
+	}
+
+	public static void main12(String[] args) {
 		StringBuilder sb = new StringBuilder();
 		sb.append("abc");
 		sb.reverse().reverse();
-		System.out.println(sb.toString());		
+		System.out.println(sb.toString());
 	}
-	
-	public static void main11(String[] args) {		
+
+	public static void main11(String[] args) {
 		System.out.println(new StringBuilder().capacity());
 	}
-	
+
 	public static void main10(String[] args) {
 		StringBuilder sb = new StringBuilder(200);
 		sb.append("hello");
-		
+
 		System.out.println(sb.toString());
 		System.out.println(sb.length());
 		System.out.println(sb.capacity());
 	}
-	
+
 	public static void main9(String[] args) {
 		StringBuilder sb = new StringBuilder();
 		sb.append("hello");
 		sb.delete(1, 3); // inc/excl
-		System.out.println(sb.toString());		
+		System.out.println(sb.toString());
 	}
-	
+
 	public static void main8(String[] args) {
 		StringBuilder sb = new StringBuilder();
-		StringBuilder sb2 = sb.append("hello");		
-		System.out.println(sb == sb2); // true		
+		StringBuilder sb2 = sb.append("hello");
+		System.out.println(sb == sb2); // true
 	}
-	
+
 	public static void main7(String[] args) {
 		StringBuilder sb = new StringBuilder();
 		sb.append("hello");
 		sb.insert(5, "e"); // Attention !
 		System.out.println(sb.toString()); // ?
 	}
+
 	public static void main6(String[] args) {
 		StringBuilder sb = new StringBuilder();
 		sb.append("hello");
