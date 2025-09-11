@@ -20,7 +20,12 @@ import java.util.Date;
 public class Dates {
 	
 	public static void main(String[] args) {
-		// ZonedDateTime => LocalDateTime + info du décalge
+		LocalTime time = LocalTime.parse("14:00:00.100");
+		System.out.println(time);
+	}
+	
+	public static void main6(String[] args) {
+		// ZonedDateTime => LocalDateTime + info du décalage
 		ZonedDateTime d = ZonedDateTime.of(LocalDateTime.now(), ZoneId.of("Europe/Paris"));		
 		System.out.println(d);
 		
