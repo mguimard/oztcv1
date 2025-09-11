@@ -13,6 +13,8 @@ import java.util.function.BiPredicate;
 public class PathsAPI {
 	
 	public static void main(String[] args) throws IOException {		
+		System.out.println(Paths.get("/a/b/c/").getFileName());
+		
 		Files.readAllLines(Paths.get("/tmp/ozt/../ozt/fichier.txt"));
 		System.out.println(Paths.get("/a/././././././b/../c").normalize());		
 	}
