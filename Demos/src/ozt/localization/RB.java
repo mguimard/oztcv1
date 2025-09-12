@@ -1,5 +1,6 @@
 package ozt.localization;
 
+import java.io.File;
 import java.util.ListResourceBundle;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -39,6 +40,12 @@ class MyRB_fr_FR extends ListResourceBundle{
 
 public class RB {	
 	
+	void f(){
+		Locale loc = new Locale("en", "IN");
+		File f = new File("/quelque/part");
+		
+	}
+	
 	public static void main(String[] args) {
 		ResourceBundle myRB = ResourceBundle.getBundle("ozt.localization.MyRB");
 		System.out.println(myRB.getString("sausage"));
@@ -48,6 +55,7 @@ public class RB {
 	}
 	
 	public static void main4(String[] args) {
+		
 		
 		Locale us = Locale.US;
 		System.out.println(us);
