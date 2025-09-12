@@ -26,13 +26,13 @@ class MySuperCalculator extends RecursiveAction {
 		// if(arr.length <= 10000)
 		// work.... and return
 		// else fork !
-		var m1 = new MySuperCalculator(arr, newFrom, newTo);
+		/*var m1 = new MySuperCalculator(arr, newFrom, newTo);
 		m1.fork();
 		
 		var m2 = new MySuperCalculator(arr, newFrom, newTo);
 		m2.fork();
 		m1.join();
-		m2.join();
+		m2.join();*/
 	}
 }
 
